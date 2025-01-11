@@ -1,7 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { CatchAsyncError } from "../middleware/catchAsyncErrors";
 import ErrorHandler from "../utils/ErrorHandler";
-import cloudinary from "cloudinary";
 import { createCourse, getAllCoursesService } from "../services/course.service";
 import CourseModel, { IComment } from "../models/course.model";
 import { redis } from "../utils/redis";
@@ -10,7 +9,6 @@ import path from "path";
 import ejs from "ejs";
 import NotificationModel from "../models/notification.Model";
 import axios from "axios";
-import { uploadBase64ToS3, deleteFile } from '../utils/s3'
 import jwt from 'jsonwebtoken'
 import quizzModel from "../models/quizz.model";
 

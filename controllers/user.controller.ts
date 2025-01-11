@@ -17,8 +17,6 @@ import {
   getUserById,
   updateUserRoleService,
 } from "../services/user.service";
-import cloudinary from "cloudinary";
-import { uploadBase64ToS3, deleteFile } from '../utils/s3';
 import fs from "fs"
 import { decryptData, encryptData } from "../utils/Aes";
 interface IRegistrationBody {
